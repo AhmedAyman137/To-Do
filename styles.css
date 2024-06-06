@@ -1,0 +1,161 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* App container styling */
+#app {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#app:hover {
+    transform: scale(1.02);
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+#task-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#task-input:focus {
+    border-color: #0056b3;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Filter buttons styling */
+#filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#filters button {
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+#filters button.active {
+    background-color: #007BFF;
+    color: white;
+    border-color: #007BFF;
+}
+
+#filters button:hover {
+    background-color: #ddd;
+}
+
+/* Task list styling */
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.task:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.task.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task button {
+    margin-left: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.task button:hover {
+    background-color: #f4f4f4;
+}
+
+.task .complete {
+    background-color: #28a745;
+    color: white;
+}
+
+.task .complete:hover {
+    background-color: #218838;
+}
+
+.task .delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.task .delete:hover {
+    background-color: #c82333;
+}
